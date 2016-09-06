@@ -11,18 +11,29 @@
 
     <TextView
         android:id="@+id/instructions_text_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
         android:layout_height="wrap_content"
         android:text="@string/instructions" />
 
     <Button
         android:layout_width="wrap_content"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/instructions_text_view"
         android:onClick="tellJoke"
+        android:id="@+id/button"
         android:text="@string/button_text"
+        android:layout_below="@+id/instructions_text_view"
+        android:layout_centerHorizontal="true" />
 
-        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:text="@string/please_consider_upgrading_to_the_paid_version"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
