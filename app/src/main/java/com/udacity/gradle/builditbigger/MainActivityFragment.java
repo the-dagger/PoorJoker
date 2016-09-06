@@ -1,6 +1,5 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,8 +23,6 @@ import java.util.concurrent.ExecutionException;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
-
-    private Context context = null;
 
     class jokeAsyncTask extends AsyncTask<Void, Void, String> {
         private MyApi myApiService = null;
@@ -61,10 +58,6 @@ public class MainActivityFragment extends Fragment {
                 return e.getMessage();
             }
         }
-    }
-
-    public MainActivityFragment(Context c) {
-        this.context = c;
     }
 
     public MainActivityFragment() {
