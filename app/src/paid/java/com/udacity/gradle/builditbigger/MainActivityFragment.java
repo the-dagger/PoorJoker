@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,13 +23,10 @@ import java.util.concurrent.ExecutionException;
  */
 public class MainActivityFragment extends Fragment {
 
+    Context context = null;
+
     class jokeAsyncTask extends AsyncTask<Void, Void, String> {
         private MyApi myApiService = null;
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-        }
 
         @Override
         protected String doInBackground(Void... voids) {
@@ -62,7 +60,8 @@ public class MainActivityFragment extends Fragment {
 
     }
 
-    public String getJoke() {
+    public String getJoke(Context c) {
+        this.context = c;
         jokeAsyncTask jokeAsyncTask = new jokeAsyncTask();
         try {
             return jokeAsyncTask.execute().get();

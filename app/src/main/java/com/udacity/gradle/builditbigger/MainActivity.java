@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
         MainActivityFragment mainActivityFragment = new MainActivityFragment();
-        String joke = mainActivityFragment.getJoke();
+        String joke = mainActivityFragment.getJoke(this);
         Intent intent = new Intent(this, JokeActivity.class);
         intent.putExtra("joke",joke);
         startActivity(intent);

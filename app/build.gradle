@@ -32,8 +32,9 @@ dependencies {
     compile project(':jokelib')
     compile project(':lib')
     compile project(path: ':backend', configuration: 'android-endpoints')
-    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    freeCompile 'com.google.android.gms:play-services-ads:9.4.0'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.android.support:support-v4:24.2.0'
     compile 'com.android.support:design:24.2.0'
+    freeCompile 'com.google.android.gms:play-services-appindexing:9.4.0'
 }
