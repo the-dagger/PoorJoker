@@ -20,6 +20,7 @@ public class JokeTeller {
         jokes.add("What did Jay-Z call his girlfriend before they got married? Feyoncé.");
         jokes.add("I started a band called 999 Megabytes — we haven’t gotten a gig yet.");
         jokes.add("Why can’t a bike stand on its own? It’s two tired.");
+        jokes.add("Alcohol is a perfect solvent: It dissolves marriages, families and careers.");
     }
 
     public static String getJoke(){
